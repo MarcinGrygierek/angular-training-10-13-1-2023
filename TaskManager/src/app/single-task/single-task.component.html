@@ -1,0 +1,12 @@
+<li class="single-task">
+    <h2>{{task.title}}</h2>
+    <div class="task-status">
+        {{ task.getPrettyStatus() }}
+    </div>   
+    <div class="task-actions">
+        <button (click)="changeToNew()" [disabled]="task.isNew()">Nowe</button>
+        <button (click)="changeToInProgress()" [disabled]="task.isInProgress()">W trakcie</button>
+        <button (click)="changeToDone()"[disabled]="task.isDone()">Zakończone</button>
+        <button (click)="deleteTask()">Usuń</button>
+    </div>
+</li>
