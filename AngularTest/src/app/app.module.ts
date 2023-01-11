@@ -8,6 +8,7 @@ import { UserActionsComponent } from './user-actions/user-actions.component';
 import { AlertButtonComponent } from './alert-button/alert-button.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { AlertsContainerComponent } from './alerts-container/alerts-container.component';
+import { ContentTemplateComponent } from './content-template/content-template.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AlertsContainerComponent } from './alerts-container/alerts-container.co
     UserActionsComponent,
     AlertButtonComponent,
     DirectivesComponent,
-    AlertsContainerComponent
+    AlertsContainerComponent,
+    ContentTemplateComponent
   ],
   imports: [
     BrowserModule,
