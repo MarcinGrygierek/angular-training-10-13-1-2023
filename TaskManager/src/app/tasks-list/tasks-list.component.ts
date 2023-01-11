@@ -10,11 +10,4 @@ import { Task } from '../task/task';
 export class TasksListComponent  {
   @Input()
   tasks!: Task[];
-
-  @Output()
-  onTaskDelete = new EventEmitter<string>()
-
-  public handleTaskDelete = (taskId: string) => {
-    this.onTaskDelete.emit(taskId);
-  }
 }

@@ -10,10 +10,6 @@ export class TaskManagerComponent implements OnInit {
 
   tasks: Task[] = [];
 
-  public handleTaskDelete = (taskId: string) => {
-    this.tasks = this.tasks.filter(task => task.id !== taskId)
-  }
-
   ngOnInit(): void {
     this.tasks = [
       new Task('test'),

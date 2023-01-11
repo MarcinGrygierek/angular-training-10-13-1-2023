@@ -12,9 +12,6 @@ export class SingleTaskComponent  {
   @Input()
   task!: Task;
 
-  @Output()
-  onTaskDelete = new EventEmitter<string>();
-
   public changeToNew = () => {
     this.task.changeStatus(TaskStatus.New);
   }
@@ -28,6 +25,6 @@ export class SingleTaskComponent  {
   }
 
   public deleteTask = () => {
-    this.onTaskDelete.emit(this.task.id);
+    this.task.hide()
   }
 }
