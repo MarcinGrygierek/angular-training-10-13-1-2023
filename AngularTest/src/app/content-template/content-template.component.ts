@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-template.component.scss']
 })
 export class ContentTemplateComponent implements OnInit {
-
+  isVisible = false;
   constructor() { }
 
   ngOnInit(): void {

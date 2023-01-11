@@ -1,0 +1,5 @@
+<form [formGroup]="loginForm">
+    <input type='text' name='login' formControlName="login">
+    <input type="password" name="password" formControlName="password">
+</form>
+<p *ngIf="isStrongPassword">Hasło jest silne!</p>

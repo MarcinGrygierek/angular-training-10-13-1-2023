@@ -1,0 +1,5 @@
+<app-alerts-container #alertsContainer [alerts]="alerts"></app-alerts-container>
+<button (click)="addAlert()">Dodaj alert</button>
+<p>Ilość alertów: {{ alertsContainer.alerts2.length }}</p>
+<input type="text" #myInput value="Lorem ipsum">
+<p>Ilość znaków: {{ myInput.value.length }}</p>

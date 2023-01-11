@@ -1,1 +1,18 @@
-<p>content-template works!</p>
+<app-smart-div>
+    <app-smart-component></app-smart-component>
+</app-smart-div>
+
+<h2>Templates</h2>
+
+<div *ngIf="isVisible; then template1 else template2"></div>
+
+<ng-template #template1>
+    <app-smart-component></app-smart-component>
+</ng-template>
+
+<ng-template #template2>
+    <p>Unable to render</p>
+</ng-template>
+
+<h2>Template outlet</h2>
+<ng-container *ngTemplateOutlet="template1"></ng-container>
