@@ -1,0 +1,13 @@
+<div class='user-card'>
+  <div class='user-content'>
+    <div class="user-img"></div>
+    <div class='user-data'>
+      {{ user.name }} {{ user.surname }}
+    </div>
+  </div>  
+  <app-alerts-container [alerts]="alerts"></app-alerts-container>
+  <app-alert-button (onNewAlert)="handleNewAlert($event)"></app-alert-button>
+  <app-user-actions [user]="user"></app-user-actions>
+</div>
+
+<app-directives></app-directives>

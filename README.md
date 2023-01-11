@@ -1,1 +1,1 @@
-# angular-training-10-13-1-2023
+# Angular training 10 - 13.01.2023
