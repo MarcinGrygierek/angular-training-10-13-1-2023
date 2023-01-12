@@ -1,0 +1,5 @@
+<div [formGroup]="group">
+    <label for="title">{{ label }}</label>
+    <input [id]="name" [name]="name" [formControlName]="name">
+    <app-field-errors [group]="group" [name]="name"></app-field-errors>
+</div>

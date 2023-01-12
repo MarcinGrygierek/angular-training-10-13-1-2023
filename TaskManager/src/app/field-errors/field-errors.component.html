@@ -1,0 +1,4 @@
+<div *ngIf="getErrors()">
+    <p *ngIf="getErrors()?.required">Pole jest wymagane</p>
+    <p *ngIf="getErrors()?.minlength">Wartość jest za krótka (min. {{ getErrors()?.minlength.requiredLength }})</p>
+</div>

@@ -16,4 +16,8 @@ export class TaskManagerComponent implements OnInit {
       new Task('lorem ipsum'),
     ]
   }
+
+  public handleNewTask = (taskTitle: string) => {
+    this.tasks = [...this.tasks, new Task(taskTitle)];
+  }
 }
