@@ -1,4 +1,4 @@
-import { TaskStatus } from "../constants/task-status";
+import { TaskStatus } from "../../constants/task-status";
 
 export class Task {
     private _id: string;
