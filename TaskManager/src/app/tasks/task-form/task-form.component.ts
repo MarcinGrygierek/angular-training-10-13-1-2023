@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-task-form',
@@ -9,10 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class TaskFormComponent {
   taskForm!: FormGroup;
 
-  @Output()
-  onNewTask = new EventEmitter<string>();
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private tasksService: TasksService) {
     this.taskForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(5)]],
     })
@@ -23,7 +21,7 @@ export class TaskFormComponent {
     // const title = this.taskForm.controls.title.value;
     const title = this.taskForm.value.title;
 
-    this.onNewTask.emit(title);
+    this.tasksService.handleNewTask(title);
     this.taskForm.reset();
   }
 }

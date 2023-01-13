@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { Task } from '../task/task';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-tasks-list',
@@ -7,7 +7,8 @@ import { Task } from '../task/task';
   styleUrls: ['./tasks-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TasksListComponent  {
-  @Input()
-  tasks!: Task[];
+export class TasksListComponent {
+  tasks = this.tasksService.tasks;
+
+  constructor(private tasksService: TasksService) { }
 }

@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './input/input.component';
 import { FieldErrorsComponent } from './field-errors/field-errors.component';
+import { TaskTimePipe } from './task-time.pipe';
 
 
 
 @NgModule({
   declarations: [
     InputComponent,
-    FieldErrorsComponent
+    FieldErrorsComponent,
+    TaskTimePipe
   ],
   exports: [
     InputComponent, 
     FieldErrorsComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TaskTimePipe
   ],
   imports: [
     CommonModule,

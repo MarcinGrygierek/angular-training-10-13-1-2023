@@ -16,6 +16,7 @@ import { RandomNumberComponent } from './random-number/random-number.component';
 import { RandomNumbersComponent } from './random-numbers/random-numbers.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestPipe } from './test.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TemplateVariablesComponent,
     RandomNumberComponent,
     RandomNumbersComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    TestPipe
   ],
   imports: [
     BrowserModule,

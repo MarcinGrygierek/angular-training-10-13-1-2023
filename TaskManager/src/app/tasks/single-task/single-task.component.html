@@ -3,6 +3,9 @@
     <div class="task-status">
         {{ task.getPrettyStatus() }}
     </div>   
+    <div class="task-time">
+        {{ task.time | async | taskTime }}
+    </div>
     <div class="task-actions">
         <button (click)="changeToNew()" [disabled]="task.isNew()">Nowe</button>
         <button (click)="changeToInProgress()" [disabled]="task.isInProgress()">W trakcie</button>

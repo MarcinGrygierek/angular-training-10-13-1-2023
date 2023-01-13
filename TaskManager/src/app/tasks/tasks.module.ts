@@ -7,6 +7,7 @@ import { TaskManagerComponent } from './task-manager/task-manager.component';
 import { TasksListComponent } from './tasks-list/tasks-list.component';
 import { SingleTaskComponent } from './single-task/single-task.component';
 import { SharedModule } from '../shared/shared.module';
+import { TasksSummaryComponent } from './tasks-summary/tasks-summary.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SharedModule } from '../shared/shared.module';
     TasksListComponent,
     SingleTaskComponent,
     TaskFormComponent,
+    TasksSummaryComponent,
   ],
   imports: [
     CommonModule,
